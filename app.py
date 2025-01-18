@@ -114,4 +114,14 @@ if st.session_state.input_history:
 else:
     st.write("No questions asked yet.")
 
-st.write("Powered by Vipas.AI")
+# st.write("Powered by Vipas.AI")
+st.write("---")
+
+st.markdown(
+    """
+    <div style='font-size:20px; font-weight: bold;'>
+        Powered by Vipas.AI
+    </div>
+    """,
+    unsafe_allow_html=True
+)
