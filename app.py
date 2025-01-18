@@ -115,7 +115,6 @@ else:
     st.write("No questions asked yet.")
 
 # st.write("Powered by Vipas.AI")
-st.write("---")
 
 st.markdown(
     """
