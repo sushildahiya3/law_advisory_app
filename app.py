@@ -34,9 +34,19 @@ if st.button("Submit"):
                 f"Question: {input_text}\n\n"
                 "Answer:"
             )
+            payload = {
+            "inputs": [
+                {
+                    "name": "prompt",
+                    "shape": [1],
+                    "datatype": "BYTES",
+                    "data": [prompt]
+                }
+            ]
+        }
 
             # Call the Llama model
-            response = client.predict(model_id=LLAMA_MODEL_ID, input_data=prompt)
+            response = client.predict(model_id=LLAMA_MODEL_ID, input_data=payload)
 
             # Extract response text
             response_text = response.get("choices", [{}])[0].get("text", "No response text available.")
