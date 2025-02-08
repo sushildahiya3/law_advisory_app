@@ -6,7 +6,7 @@ from vipas.exceptions import UnauthorizedException, NotFoundException
 client = model.ModelClient()
 
 # Model ID for Llama model
-LLAMA_MODEL_ID = "mdl-hy3grx9aoskqu"  # Replace with the correct model ID for the Llama model
+LLAMA_MODEL_ID = "mdl-s5cdasend8dza"  # Replace with the correct model ID for the Llama model
 
 # Initialize session state for input and response history
 if "input_history" not in st.session_state:
