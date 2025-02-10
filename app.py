@@ -49,7 +49,7 @@ if st.button("Submit"):
             response = client.predict(model_id=LLAMA_MODEL_ID, input_data=payload)
 
             # Extract response text
-            response_text = response.get("choices", [{}])[0].get("text", "No response text available.")
+            response_text = response['outputs'][0]['data'][0]
 
             # Update session state with input and response
             st.session_state.input_history.append(sanitized_input)
